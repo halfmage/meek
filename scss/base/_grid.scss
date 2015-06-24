@@ -12,6 +12,7 @@
 	padding-left: 1em;
 	padding-right: 1em;
 	*zoom: 1;
+		//clean this up
 		&:before,
 		&:after {
 			content: " ";
@@ -23,6 +24,7 @@
 }
 
 .col {
+	//better solution for shifting cols among themselves
 	margin-bottom: 2em;
 }
 
