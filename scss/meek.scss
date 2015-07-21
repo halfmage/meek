@@ -1,3 +1,12 @@
-@import "base/normalize";
-@import "base/base";
-@import "base/grid";
+// Variables and mixins
+@import "variables";
+@import "mixins";
+
+// Reset
+@import "normalize";
+
+// Base CSS
+@import "base";
+@import "grid";
+
+// Modules
