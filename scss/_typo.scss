@@ -1,0 +1,10 @@
+h1,h2,h3,h4,h5,h6 {
+	margin: $headline-margin;
+
+	font-weight: bold;
+	font-family: $headline-font-family;
+}
+
+p {
+	margin: 0 0 2em 0;
+}
