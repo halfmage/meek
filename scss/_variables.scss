@@ -15,6 +15,7 @@ $font-mono:					"Courier New", Courier, monospace;
 
 
 // Body Variables
+// --------------------
 $body-bg:					#fff;
 $body-color:				#222;
 
@@ -23,9 +24,14 @@ $body-line-height:			1.5em;
 $body-font-family:			$font-sans-serif;
 
 
+// Page Measurements
+// --------------------
+$wrapper-max-width:			64em;
+
+$breakpoint:				40em;
+
 
 // Headlines
 // --------------------
-
 $headline-margin:			0 0 1em 0;
 $headline-font-family:		$font-sans-serif;

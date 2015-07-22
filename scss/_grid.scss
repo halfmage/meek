@@ -1,45 +1,78 @@
-.plate {
+
+
+// Container / Plate
+// --------------------
+.container {
 	margin: 0 auto;
 	width: 100%;
-	padding-top: 4em;
-	padding-bottom: 4em;
+	padding: 1em 0;
+
+	&.zero {
+		padding: 0;
+	}
+
+	&.medium {
+		padding: 2em 0;
+	}
+
+	&.large {
+		padding: 4em 0;
+	}
+
+	&.hero {
+		padding: 8em 0;
+	}
 }
 
+
+// Wrapper
+// --------------------
 .wrapper {
+	max-width: $wrapper-max-width;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 64em;
-	padding-left: 1em;
-	padding-right: 1em;
 	*zoom: 1;
-		//clean this up
-		&:before,
-		&:after {
-			content: " ";
-			display: table;
-		}
-		&:after {
-			clear: both;
-		}
+	// Clearfix
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
 }
 
+
+// Column System
+// --------------------
 .col {
-	//better solution for shifting cols among themselves
 	margin-bottom: 2em;
 }
 
-@media (min-width: 40em) {
+@media (min-width: $breakpoint) {
 	.col {
 		float: left;
+		margin-bottom: 0;
 		padding-left: 1em;
 		padding-right: 1em;
-	}
+		&.col-1 { width: 100%; }
+		&.col-2 { width: 50%; }
+		&.col-3 { width: 33.33%; }
+		&.col-2-3 { width: 66.66%; }
+		&.col-4 { width: 25%; }
+		&.col-5 { width: 20%; }
+		&.col-2-5 { width: 40%; }
+		&.col-3-5 { width: 60%; }
+		&.col-4-5 { width: 80%; }
+		&.col-6 { width: 16.66%; }
+	} 
+}
 
-	.col.one { width: 100%; }
-	.col.two-three { width: 66.7%; }
-	.col.two { width: 50%; }
-	.col.three { width: 33.3%; }
-	.col.four { width: 25%; }
-	.col.five { width: 20%; }
-	.col.right { float: right; }  
+//demo styles
+.wrapper > .col {
+	border-left: 5px solid blue;
+	&:first-child {
+		border-left: none;
+	}
 }
